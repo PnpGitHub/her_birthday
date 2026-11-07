@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffedf4" />
+  <title>For Aayushi 💞</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink:#ff5f9e;
+      --deep:#8e315d;
+      --cream:#fff9f4;
+      --ink:#43263a;
+      --yellow:#ffe58f;
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin:0;
+      min-height:100vh;
+      color:var(--ink);
+      font-family:"DM Sans",sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%,#fff 0 4%,transparent 5%),
+        linear-gradient(135deg,#ffe7f0,#fff4df 55%,#f4e9ff);
+      overflow-x:hidden;
+    }
+
+    button {
+      font:inherit;
+      cursor:pointer;
+      border:0;
+    }
+
+    .floaties {
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      overflow:hidden;
+      z-index:0;
+    }
+
+    .floaties span {
+      position:absolute;
+      bottom:-50px;
+      opacity:.55;
+      animation:floatUp linear infinite;
+      font-size:24px;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform:translateY(-115vh) rotate(25deg);
+        opacity:0;
+      }
+    }
+
+    .wrap {
+      position:relative;
+      z-index:1;
+      width:min(720px,92vw);
+      margin:0 auto;
+      padding:28px 0 55px;
+    }
+
+    .topline {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:1.5px;
+      color:#a65b7b;
+      text-transform:uppercase;
+    }
+
+    .pill {
+      background:#ffffffa8;
+      border:1px solid #fff;
+      border-radius:99px;
+      padding:9px 13px;
+    }
+
+    .card {
+      margin-top:22px;
+      padding:clamp(24px,6vw,48px);
+      border:1px solid #ffffffd9;
+      border-radius:30px;
+      background:#ffffffc9;
+      box-shadow:0 22px 70px #a64b7020;
+      backdrop-filter:blur(10px);
+      text-align:center;
+    }
+
+    .eyebrow {
+      color:#b34c7b;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    h1 {
+      font-family:Pacifico,cursive;
+      color:var(--deep);
+      font-size:clamp(38px,9vw,66px);
+      line-height:1.15;
+      margin:14px 0;
+      font-weight:400;
+    }
+
+    h2 {
+      color:var(--deep);
+      font-size:clamp(25px,6vw,38px);
+      margin:10px 0 12px;
+    }
+
+    p {
+      line-height:1.7;
+      color:#765367;
+    }
+
+    .sticker {
+      font-size:54px;
+      display:block;
+      margin-bottom:10px;
+    }
+
+    .primary {
+      color:white;
+      background:linear-gradient(135deg,#ff5f9e,#ee4387);
+      padding:15px 25px;
+      border-radius:99px;
+      font-weight:800;
+      box-shadow:0 9px 20px #f05a963d;
+      transition:.2s;
+    }
+
+    .primary:hover {
+      transform:translateY(-2px) scale(1.02);
+    }
+
+    .secondary {
+      color:#a04470;
+      background:#fff0f6;
+      padding:13px 20px;
+      border-radius:99px;
+      font-weight:700;
+    }
+
+    .actions {
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .progress {
+      height:7px;
+      background:#f7dbe7;
+      border-radius:99px;
+      margin:22px 0 0;
+      overflow:hidden;
+    }
+
+    .bar {
+      width:0;
+      height:100%;
+      background:linear-gradient(90deg,#ff7eaf,#ffc66b);
+      border-radius:99px;
+      transition:width .4s;
+    }
+
+    .question {
+      font-size:clamp(23px,5vw,31px);
+      font-weight:800;
+      color:#743451;
+      margin:12px 0 8px;
+    }
+
+    .answers {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:13px;
+      min-height:100px;
+      margin-top:20px;
+    }
+
+    .answer {
+      background:#fff;
+      border:2px solid #f6c6d9;
+      color:#8e315d;
+      padding:13px 20px;
+      border-radius:18px;
+      font-weight:800;
+      box-shadow:0 5px 14px #a64b7010;
+    }
+
+    .answer.good {
+      background:#ff5f9e;
+      color:#fff;
+      border-color:#ff5f9e;
+    }
+
+    .answer.no { position:relative; }
+
+    .tiny {
+      font-size:13px;
+      color:#a16d86;
+    }
+
+    .photo-frame {
+      background:#fff;
+      padding:12px 12px 48px;
+      border-radius:8px;
+      width:min(390px,100%);
+      margin:22px auto 12px;
+      transform:rotate(-1.5deg);
+      box-shadow:0 12px 35px #5a27401c;
+    }
+
+    .photo-frame img {
+      display:block;
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      background:linear-gradient(135deg,#ffe2ed,#f8eaff);
+      border-radius:3px;
+    }
+
+    .photo-caption {
+      font-family:Pacifico,cursive;
+      color:#9b426c;
+      font-size:22px;
+      margin-top:12px;
+    }
+
+    .dots {
+      display:flex;
+      justify-content:center;
+      gap:7px;
+      margin:16px 0;
+    }
+
+    .dots i {
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#f3bfd3;
+    }
+
+    .dots i.active {
+      background:#ef5795;
+      transform:scale(1.35);
+    }
+
+    .letter {
+      background:#fffaf4;
+      border:1px dashed #e8a9c2;
+      padding:22px;
+      border-radius:18px;
+      text-align:left;
+      white-space:pre-line;
+      line-height:1.8;
+      color:#75445d;
+    }
+
+    .cake {
+      font-size:80px;
+      animation:bob 1.5s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+      50% {
+        transform:translateY(-9px) rotate(3deg);
+      }
+    }
+
+    .hidden { display:none !important; }
+
+    .footer {
+      text-align:center;
+      color:#a16d86;
+      font-size:12px;
+      padding:20px 0;
+    }
+
+    @media(max-width:480px) {
+      .card { border-radius:24px; }
+      .topline { font-size:10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="floaties" id="floaties"></div>
+
+  <main class="wrap">
+
+    <div class="topline">
+      <span class="pill">A tiny internet surprise ✨</span>
+      <span>Made with 💗</span>
+    </div>
+
+    <section class="card" id="screen">
+      <span class="sticker">🎀💌🎀</span>
+
+      <div class="eyebrow">Important announcement</div>
+
+      <h1>Hey, Aayushi! 💞</h1>
+
+      <p>
+        Your one and only has made a little corner of the internet just for you.<br>
+        Warning: contains silly questions, suspiciously cute content and lots of love.
+      </p>
+
+      <div class="actions">
+        <button class="primary" onclick="startGame()">
+          Open your surprise ✨
+        </button>
+      </div>
+
+      <p class="tiny">
+        P.S. No technical knowledge required. Just your cutest smile.
+      </p>
+    </section>
+
+    <div class="progress">
+      <div class="bar" id="bar"></div>
+    </div>
+
+    <div class="footer">
+      Aayushi's very unofficial birthday experience • 100% made with love
+    </div>
+
+  </main>
+
+<script>
+
+  // ✏️ PERSONALISE HERE: Replace photo filenames and captions.
+
+  const PHOTOS = [
+    {
+      src: "images/photo-1.jpg",
+      caption: "You are the best part of my favourite story 💗"
+    },
+    {
+      src: "images/photo-2.jpg",
+      caption: "Two people. Unlimited nonsense. 😂"
+    },
+    {
+      src: "images/photo-3.jpg",
+      caption: "One of my favourite views, always."
+    },
+    {
+      src: "images/photo-4.jpg",
+      caption: "Collecting little moments with you ✨"
+    },
+    {
+      src: "images/photo-5.jpg",
+      caption: "My forever favourite person. 💞"
+    }
+  ];
+
+  const QUESTIONS = [
+    {
+      q:"Do you like me? 🥺",
+      a:["YES, obviously ❤️","NO 🙄"],
+      yes:0,
+      no:1,
+      tease:"Nice try! The NO button has left the chat. 😂"
+    },
+    {
+      q:"Who is the cutest person here?",
+      a:["Me, obviously 😎","You, my cutie 🥰","Both. Don't make me choose!"],
+      yes:1,
+      tease:"Correct answer accepted. You are dangerously smart. 😌"
+    },
+    {
+      q:"Will you tolerate me for the next 100 years?",
+      a:["Lifetime subscription! 💍","Can I cancel anytime? 😂"],
+      yes:0,
+      no:1,
+      tease:"Cancellation request rejected by the Love Department."
+    },
+    {
+      q:"Who wins an argument?",
+      a:["You. Always. 🏆","Me, in my imagination 🤡"],
+      yes:0,
+      no:1,
+      tease:"The system has detected a very diplomatic answer."
+    },
+    {
+      q:"Do I get unlimited hugs?",
+      a:["Unlimited. No expiry. 🤗","Only after snacks 🍟"],
+      yes:0,
+      no:1,
+      tease:"Fair. Snacks are a serious matter."
+    }
+  ];
+
+  let questionIndex = 0;
+  let photoIndex = 0;
+
+  const screen = document.getElementById("screen");
+  const bar = document.getElementById("bar");
+
+  function progress(n) {
+    bar.style.width = n + "%";
+  }
+
+  function startGame() {
+    questionIndex = 0;
+    photoIndex = 0;
+    showQuestion();
+  }
+
+  function showQuestion() {
+
+    const item = QUESTIONS[questionIndex];
+
+    screen.innerHTML = `
+      <span class="sticker">🕵️‍♀️💗</span>
+
+      <div class="eyebrow">
+        Relationship verification • ${questionIndex+1}/${QUESTIONS.length}
+      </div>
+
+      <div class="question">${item.q}</div>
+
+      <p>
+        Choose wisely. Your answers may be used for cuddling purposes.
+      </p>
+
+      <div class="answers" id="answers"></div>
+
+      <p class="tiny" id="tease">
+        This is a very serious scientific test.
+      </p>
+    `;
+
+    const answers = document.getElementById("answers");
+
+    item.a.forEach((answer,i)=>{
+
+      const btn = document.createElement("button");
+
+      btn.className = "answer " + (i===item.yes ? "good" : "no");
+      btn.textContent = answer;
+
+      if(i===item.no && item.a.length===2) {
+
+        btn.addEventListener("pointerenter", dodge);
+
+        btn.addEventListener("touchstart", dodge, {
+          passive:true
+        });
+
+        btn.addEventListener("click", ()=>{
+          dodge();
+          document.getElementById("tease").textContent = item.tease;
+        });
+
+      } else {
+
+        btn.addEventListener("click", ()=>{
+
+          document.getElementById("tease").textContent =
+            item.tease || "Excellent choice! 💞";
+
+          [...answers.children].forEach(b=>b.disabled=true);
+
+          setTimeout(()=>{
+
+            questionIndex++;
+
+            progress(
+              10 + (questionIndex/QUESTIONS.length)*45
+            );
+
+            if(questionIndex<QUESTIONS.length) {
+              showQuestion();
+            } else {
+              showPhotoIntro();
+            }
+
+          },850);
+
+        });
+
+      }
+
+      answers.appendChild(btn);
+
+    });
+
+    progress(10 + (questionIndex/QUESTIONS.length)*45);
+
+  }
+
+  function dodge(e) {
+
+    const btn = e.currentTarget;
+
+    const dx = (Math.random()>.5?1:-1) *
+      (55+Math.random()*90);
+
+    const dy = (Math.random()>.5?1:-1) *
+      (25+Math.random()*65);
+
+    btn.style.transform =
+      `translate(${dx}px,${dy}px) rotate(${Math.random()*24-12}deg)`;
+
+    document.getElementById("tease").textContent =
+      QUESTIONS[questionIndex].tease;
+
+  }
+
+  function showPhotoIntro() {
+
+    screen.innerHTML = `
+      <span class="sticker">🏆💘</span>
+
+      <div class="eyebrow">Test completed</div>
+
+      <h2>Relationship status: PERFECT MATCH</h2>
+
+      <p>
+        You passed with flying colours.
+        Your reward is a little trip down memory lane...
+      </p>
+
+      <div class="actions">
+        <button class="primary" onclick="showPhoto()">
+          Unlock our memories 📸
+        </button>
+      </div>
+    `;
+
+    progress(60);
+
+  }
+
+  function showPhoto() {
+
+    if(photoIndex>=PHOTOS.length) {
+      showLetter();
+      return;
+    }
+
+    const photo = PHOTOS[photoIndex];
+
+    screen.innerHTML = `
+
+      <div class="eyebrow">
+        Memory ${photoIndex+1} of ${PHOTOS.length}
+      </div>
+
+      <h2>A little piece of us 💞</h2>
+
+      <div class="photo-frame">
+
+        <img
+          src="${photo.src}"
+          alt="Our memory ${photoIndex+1}"
+          onerror="this.style.objectFit='contain';this.alt='Add your photo at ${photo.src}'"
+        >
+
+        <div class="photo-caption">
+          ${photo.caption}
+        </div>
+
+      </div>
+
+      <div class="dots">
+        ${PHOTOS.map((_,i)=>
+          `<i class="${i===photoIndex?'active':''}"></i>`
+        ).join("")}
+      </div>
+
+      <p class="tiny">
+        Take your time. This one's special.
+      </p>
+
+      <div class="actions">
+
+        <button class="primary" onclick="nextPhoto()">
+          ${
+            photoIndex===PHOTOS.length-1
+              ? "One last surprise 💌"
+              : "Next memory →"
+          }
+        </button>
+
+      </div>
+    `;
+
+    progress(
+      60 + ((photoIndex+1)/PHOTOS.length)*30
+    );
+
+  }
+
+  function nextPhoto() {
+    photoIndex++;
+    showPhoto();
+  }
+
+  function showLetter() {
+
+    screen.innerHTML = `
+
+      <span class="sticker">💌</span>
+
+      <div class="eyebrow">
+        A message from your favourite human
+      </div>
+
+      <h2>One last thing, Aayushi...</h2>
+
+      <div class="letter">Happy Birthday, Aayushi(babu)! 💞
+
+I hope this new year of your life brings you endless happiness, laughter and everything your heart wishes for.
+
+Thank you for being my favourite person, my partner in all the nonsense, and the person who makes ordinary days feel special.
+
+I may not be perfect, but I promise to keep choosing you, making you laugh, annoying you a little, and loving you a lot.
+
+Here's to all the memories we've made and all the beautiful ones still waiting for us.
+
+I love you. Always. ❤️
+
+— Your favourite troublemaker</div>
+
+      <div class="actions">
+        <button class="primary" onclick="finale()">
+          Open the birthday cake 🎂
+        </button>
+      </div>
+
+    `;
+
+    progress(95);
+
+  }
+
+  function finale() {
+
+    screen.innerHTML = `
+
+      <div class="cake">🎂</div>
+
+      <div class="eyebrow">
+        Today is all about you
+      </div>
+
+      <h1>
+        Happy Birthday,<br>
+        Aayushi! 💞
+      </h1>
+
+      <p>
+        Keep smiling, keep shining,
+        and never forget how loved you are.
+      </p>
+
+      <h2>Love you loads! ❤️</h2>
+
+      <div class="actions">
+        <button class="secondary" onclick="location.reload()">
+          Replay our little story ↻
+        </button>
+      </div>
+
+    `;
+
+    progress(100);
+    confettiHearts();
+
+  }
+
+  function confettiHearts() {
+
+    for(let i=0;i<35;i++){
+
+      const s = document.createElement("span");
+
+      s.textContent =
+        ["💗","💕","✨","💞","🌸"][i%5];
+
+      s.style.left = Math.random()*100+"%";
+
+      s.style.animationDuration =
+        (4+Math.random()*5)+"s";
+
+      s.style.animationDelay =
+        Math.random()*2+"s";
+
+      document.getElementById("floaties")
+        .appendChild(s);
+
+    }
+
+  }
+
+  // Ambient floating decorations
+
+  for(let i=0;i<18;i++){
+
+    const s = document.createElement("span");
+
+    s.textContent = ["♡","✦","💗","✿"][i%4];
+
+    s.style.left = Math.random()*100+"%";
+
+    s.style.animationDuration =
+      (9+Math.random()*12)+"s";
+
+    s.style.animationDelay =
+      (-Math.random()*15)+"s";
+
+    document.getElementById("floaties")
+      .appendChild(s);
+
+  }
+
+</script>
+
+</body>
+</html>
